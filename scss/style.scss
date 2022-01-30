@@ -16,18 +16,6 @@ body{
     }
 }
 
-.ejemplo{
-    img{
-        width: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-        filter: invert(.3);
-    }
-}
-
-
 .container{
     max-width: 80rem;
     margin: 0 auto;
