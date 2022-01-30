@@ -1,0 +1,212 @@
+@import "variables";
+
+* {
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $White;
+    padding: 1.5rem;
+
+    @media (max-width: $breakpoint-small) {
+        padding: 1rem;
+    }
+}
+
+.ejemplo{
+    img{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        filter: invert(.3);
+    }
+}
+
+
+.container{
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: 7.75rem;
+    
+
+    @media (max-width: $breakpoint-medium) {
+        margin-top: 5.125rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-bottom: 10rem;
+    }
+
+
+    .loveproducts{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $breakpoint-medium) {
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        & .info{
+
+            @media (max-width: $breakpoint-medium) {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            h1{
+                font-size: 3.2rem;
+                letter-spacing: 0.5px;
+                line-height: 3.55rem;
+                margin-bottom: 1.25rem;
+                color: $Purple;
+
+                @media (max-width: $breakpoint-medium) {
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    text-align: center;
+                }
+            }
+
+            p{
+                color: $PurpleLight;
+                line-height: 1.7rem;
+                width: 49.4%;
+                font-size: 1rem;
+                letter-spacing: 0.16px;
+
+                @media (max-width: $breakpoint-medium) {
+                    text-align: center;
+                    width: 50%;
+                }
+
+                @media (max-width: $breakpoint-small) {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+
+        & .stars{
+            width: 100%;
+
+            & .star{
+
+                & > div{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5625rem;
+
+                    img{
+                        width: 1.2rem;
+                        height: 1.2rem;
+                    }
+                }
+
+                display: flex;
+                align-items: center;
+                gap: 2.1875rem;
+                background-color: $PurpleVeryLight;
+                border-radius: 0.5rem;
+                margin-bottom: 1rem;
+                padding: 1.25rem 3.75rem 1.25rem 2.0625rem;
+
+                @media (max-width: $breakpoint-medium) {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 1.25rem;
+                    width: 100%;
+                    gap: 1rem;
+                }
+
+
+                &:nth-child(2){
+                    @media (min-width: $breakpoint-medium) {
+                        transform: translateX(-3rem);
+                    }
+                }
+
+                &:nth-child(1){
+                    @media (min-width: $breakpoint-medium) {
+                        transform: translateX(-6rem);
+                    }
+                }
+            }
+
+            h4{
+                word-break: break-all;
+                width: 16.15rem;
+                font-size: 1rem;
+                color: $Purple;
+
+                @media (max-width: $breakpoint-medium) {
+                    width: auto;
+                }
+            }
+        }
+        margin-bottom: 3.5rem;
+    }
+
+    .comments{
+        display: flex;
+        gap: 2rem;
+
+        @media (max-width: $breakpoint-medium) {
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .comment{
+            padding: 2.8rem 2.0625rem;
+            border-radius: 0.5rem;
+            background-color: $Purple;
+
+            .profile{
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                margin-bottom: 2.3rem;
+
+                img{
+                    width: 2.85rem;
+                    height: 2.85rem;
+                    border-radius: 50%;
+                }
+
+                & > div{
+                    h4{
+                        color: $White;
+                        margin-bottom: 0.4rem;
+                    }
+
+                    p{
+                        color: $Pink;
+                    }
+                }
+            }
+
+            p{
+                color: $White;
+                line-height: 1.5rem;
+                letter-spacing: 0.16px;
+            }
+
+            &:nth-child(2){
+                transform: translateY(1.1rem);
+            }
+
+            &:nth-child(3){
+                transform: translateY(2.2rem);
+            }
+        }
+    }
+}
